@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+	*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Container {
+    width: 100%;
+    height: 750px;
+    color: black;
+    background-color: DarkSlateGrey;
+}
+
+.GRIDLINK{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 750px; 
+}
+
+.asides{
+    margin: auto;
+    width: 100%;
+   
+}
+.holder{
+    margin: auto;
+    width: 80%;
+	
+}
+.asides a{
+     display: block;
+     padding: 20px 0px;
+     margin :20px 0;
+     box-shadow: 2px 2px 0px #fff;
+     background: aliceblue;
+     width: 50%;
+     text-align: center;
+     border-radius: 10px;
+}
+.Kill{
+    margin: auto;
+    background: DarkSeaGreen;
+    border-radius: 20px;
+    padding: 100px;
+    text-transform: uppercase;
+}
+
+
+.me{
+    background-color: beige;
+    font-size: 32px;
+    margin: 10px 0;
+    padding: 20px;
+   
+}
+
+.me input{
+    width: 100%;
+    height: 32px;
+    
+}
+
+.me button{
+    box-shadow: 2px 2px 0px ;
+    background: aliceblue;
+    font-size: 15px;
+    padding: 20px 10px;
+    margin-top: 20px;
+    color: Black;
+    border-radius: 20px;
+}
+.hide{
+    display: none;
+}
+	</style>
+</head>
+<body>
+    <script>
+        function hide()
+        {  
+               var lists=document.getElementById("list");
+               lists.classList.remove('hide');
+
+              var par=document.getElementById("par");
+               par.classList.add("hide");
+
+             var ele=document.getElementById("conect");
+             ele.classList.add('hide');
+               
+             
+             
+        }
+
+        function unhide()
+        {      var lists=document.getElementById("list");
+               lists.classList.add("hide");
+
+             var par=document.getElementById("par");
+              par.classList.remove('hide');
+
+            var ele=document.getElementById("conect");
+             ele.classList.add('hide');
+               
+        }
+
+        function getvalue()
+        {
+            var ele=document.getElementById("conect");
+            ele.classList.remove('hide');
+            var  list=document.getElementById("li").value;
+              ele.innerHTML=list;
+              console.log(list);
+              
+              var lists=document.getElementById("list");
+              var par=document.getElementById("par");
+               lists.classList.add("hide");
+               par.classList.add('hide');
+              ele.classList.add('Kill');
+        }
+
+         function getvalue2()
+        {
+            var ele=document.getElementById("conect");
+            ele.classList.remove('hide');
+            var  list=document.getElementById("li2").value;
+              ele.innerHTML=list;
+              console.log(list);
+              
+              var lists=document.getElementById("list");
+              var par=document.getElementById("par");
+               lists.classList.add("hide");
+               par.classList.add('hide');
+              ele.classList.add('Kill');
+        }
+
+    </script>
+  
+    <div class="Container">
+         <marquee>Render List Tag And Paragraph Tag HTML</marquee>
+        <div class="GRIDLINK">
+             
+            <div class="asides">
+               <div class="holder"> <a   role="button" onclick="hide()"> LIST</a>
+                <a  onclick="unhide()">PARAGRAPH</a>
+                </div>
+            </div>
+               
+            <div class="Kill" id="list">
+
+                <p>LIST TAG 
+                    HTML lists allow web developers to group a set of related items in lists.<br>
+                    Unordered HTML List<br>
+                    Ordered HTML List<br>
+                    HTML Description Lists<br>
+                </p>
+
+                <div class="me">
+                    <p>EXAMPLE </p>
+                    <P>list tag:</P>
+                    <input  id="li" type="text" placeholder="<ol> <li> enter the text to render html </li> </ol>">
+
+                    <button  onclick="getvalue()">CLICK TO RENDER HMTL</button>
+                </div>
+
+
+            </div>
+
+             <div class="Kill hide" id="par">
+
+                <p>A paragraph always starts on a new line, and browsers automatically <br>add some white space (a margin) before and after a paragraph.
+                   
+                </p>
+
+                <div class="me">
+                    <p>EXAMPLE </p>
+                    <P>paragraph tag:</P>
+                    <input   id="li2"  type="text" placeholder="<p> enter the text to render html </P>">
+
+                    <button onclick="getvalue2()">CLICK TO RENDER HMTL</button>
+                </div>
+
+
+            </div>
+
+            
+                
+             <div class="htmldis" id="conect">
+                 
+            
+             </div>
+
+        </div>
+         
+    </div>
+
+</body>
+</html>
