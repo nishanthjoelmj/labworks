@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+p 
+{
+ text-align: center;
+ color: white;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 40px;
+ font-weight: bold;
+}
+.replace{
+        position: auto;
+        top: 50%;
+        bottom: 50%;
+        left: 30%;
+        right: 50%;
+        margin: auto;
+    }		
+.btn-group button 
+{
+  background-color: black; 
+  border: 1px solid white; 
+  color: white;
+  font-size: 20px;
+  font-family: 'Brush Script MT', cursive;
+  padding: 10px 24px; 
+  cursor: pointer;
+  float: left; 
+}
+
+.btn-group:after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) 
+{
+  border-right: none; 
+}
+
+.btn-group button:hover {
+  background-color: darkslategray;
+}
+            </style>
+        <title>Lab-4 Assignment</title>
+<div class="row"> 
+
+  
+</div>
+
+
+        <body bgcolor="black">
+            <p>SUPER-CARS</p>
+            
+            <img id="column" src="" alt="" />
+			<div class="btn-group" style="width:100%">
+               <button onclick="picture()"  style="width:25%">Buggati</button>
+               <button onclick="picture1()" style="width:25%">Ferrari</button>
+               <button onclick="picture2()" style="width:25%">Lamborghini</button>
+               <button onclick="picture3()" style="width:25%">McLaren</button>
+            </div>
+			
+          
+<script type="text/javascript">  
+            function picture()
+            { 
+            var pic = "https://i.ibb.co/d4nJrBS/buga.png" 
+            document.getElementById('column').src = pic.replace();
+            }
+            function picture1()
+            { 
+            var pic = "https://i.ibb.co/PmZ6GKv/ferro.png" 
+            document.getElementById('column').src = pic.replace();
+            }
+            function picture2()
+            { 
+            var pic = "https://i.ibb.co/wst0GFN/lambo.png" 
+            document.getElementById('column').src = pic.replace();
+            }
+			function picture3()
+            { 
+            var pic = "https://i.ibb.co/ZX1pD8V/mec.png" 
+            document.getElementById('column').src = pic.replace();
+            }
+</script>
+
+        </body>
+        
+    </head>
+</html>
