@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER CARS</title>
+    <style>
+	*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.HEADING{
+ 
+padding: 100px 0;
+justify-content: center;
+display: flex;
+font-size: 64px;
+color: crimson;
+}
+
+.CONTAINER{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.btn-group button 
+{
+  background-color: black; 
+  border: 1px solid white; 
+  color: white;
+  font-size: 30px;
+  font-family: 'Brush Script MT', cursive;
+  padding: 10px 24px; 
+  cursor: pointer;
+  float: left; 
+}
+
+.btn-group:after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) 
+{
+  border-right: none; 
+}
+
+.btn-group button:hover {
+  background-color: white;
+  transform: scale(1.2);
+  z-index: 2;
+  list-style: none;
+  color: black;
+  transition:ease-in-out 0.5s;
+}
+
+
+.images{
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-gap: 50px;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 250px;
+}
+	</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://nishanthjoelmj.github.io/labworks/main5.html">Main Page</a>
+  <a href="https://nishanthjoelmj.github.io/labworks/sub1.html">Super Cars</a>
+  <a href="https://nishanthjoelmj.github.io/labworks/sub2.html">Super Bikes</a>
+  
+
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+    <div class="CONTAINER">
+            <div class="HEADING">
+                
+                <h1>SUPER CARS</h1>
+                
+            </div>
+            <div class="btn-group" style="width:100%">
+               <button id="Buggati" onclick="Buggati()" style="width:25%">Buggati</button>
+               <button id="Fer" onclick="ferrari()" style="width:25%">Ferrari</button>
+               <button id="Lamborghini" onclick="lambo()" style="width:25%">Lamborghini</button>
+               <button id="McLaren" onclick="Mc()" style="width:25%">McLaren</button>
+            </div>
+            
+
+            <div class="images" id="gridimg">
+
+            </div>
+            
+
+         <script>
+		 		 function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+	
+		 
+let imgs = document.getElementById("gridimg");
+
+function Buggati()
+{
+    let Buggati=[];
+    Buggati.push(
+      "https://i.ibb.co/S6Dw34H/yannis-zaugg-7-TB-r-Nu-Mo-unsplash.jpg"
+
+    );
+
+    Buggati.push(
+      "https://i.ibb.co/ZdGvZW8/wp2395086-bugatti-chiron-2018-wallpapers.jpg"
+    );
+
+    Buggati.push(
+      "https://i.ibb.co/hdVtL5p/1280px-Bugatti-Veyron-16-4-Frontansicht-2-5-April-2012-Dusseldorf.jpg"
+    );
+    Buggati.push(
+      "https://i.ibb.co/bWXyJWL/wp1925738-bugatti-chiron-2017-wallpapers.jpg"
+    );
+
+    Buggati.push(
+      "https://i.ibb.co/Z8hVhGx/david-leveque-esv-WH-ow-Wug-unsplash.jpg"
+    );
+
+    Buggati.push(
+      "https://i.ibb.co/ZTvKXJC/Bugatti-Divo-GIMS-2019-Le-Grand-Saconnex-GIMS0029.jpg"
+    );
+     
+    imgs.innerHTML=""
+    Buggati.forEach((item) =>{
+       
+          let divs = document.createElement("div");
+          let pic = document.createElement("img");
+         
+          pic.src = item;
+          pic.style.width = "300px";
+          pic.style.height = "200px";
+          divs.appendChild(pic);
+          imgs.appendChild(divs);
+
+    });
+}
+
+
+function ferrari()
+{
+    let Fer=[];
+
+    Fer.push("https://i.ibb.co/R36tK2z/La-Ferrari-Sebastian-Vettel.jpg");
+    Fer.push(
+      "https://i.ibb.co/Bzh0F95/p2a2965.jpg"
+    );
+
+    Fer.push(
+      "https://i.ibb.co/nkHdj8N/p2a4561.jpg"
+    );
+
+    Fer.push(
+      "https://i.ibb.co/3djjfLB/p2a6168.jpg"
+    );
+
+    Fer.push(
+      "https://i.ibb.co/vdGqt9G/brandon-atchison-Dz-W3-MT-i-IY-unsplash.jpg"
+    );
+
+    Fer.push(
+      "https://i.ibb.co/Sff0V7C/goh-rhy-yan-f-SDCASisgs-unsplash.jpg"
+    );
+
+    imgs.innerHTML = "";
+    Fer.forEach((item) => {
+      let divs = document.createElement("div");
+      let pic = document.createElement("img");
+      
+      pic.src = item;
+      pic.style.width = "300px";
+      pic.style.height = "200px";
+      divs.appendChild(pic);
+      imgs.appendChild(divs);
+    });
+}
+
+
+function lambo()
+{
+    let Lamborghinis=[]
+    
+    Lamborghinis.push(
+      "https://i.ibb.co/2SWLWVF/teahub-io-wallpaper-lamborghini-hd-2335515.jpg"
+    );
+   
+    Lamborghinis.push(
+      "https://i.ibb.co/rpVZN93/malusi-msomi-4-Xt-Aq-MN9la-E-unsplash.jpg"
+    );
+
+    Lamborghinis.push(
+      "https://i.ibb.co/BG1yy8V/lamborghini-aventador-lp700-4-white-front-view-105768-1024x600.jpg"
+    );
+
+    Lamborghinis.push(
+      "https://i.ibb.co/s5tn28p/lamborghini-aventador-lp-750-4-sv-108049-1024x600.jpg"
+    );
+
+    Lamborghinis.push(
+      "https://i.ibb.co/D55Vtk3/lamb.jpg"
+    );
+
+    Lamborghinis.push(
+      "https://i.ibb.co/J7sYg3Z/thomas-haas-S5o-y8-XM7y-I-unsplash.jpg"
+    );
+
+    imgs.innerHTML = "";
+    Lamborghinis.forEach((item) => {
+      let divs = document.createElement("div");
+      let pic = document.createElement("img");
+    
+      pic.src = item;
+      pic.style.width = "300px";
+      pic.style.height = "200px";
+      divs.appendChild(pic);
+      imgs.appendChild(divs);
+    });
+}
+
+
+function Mc()
+{
+    let McLarens=[];
+     McLarens.push(
+       "https://i.ibb.co/5xvxwLV/wp4582805-mclaren-600lt-wallpapers.jpg"
+     );
+
+     McLarens.push(
+       "https://i.ibb.co/Mf0KMCM/wp4582700-mclaren-600lt-wallpapers.jpg"
+     );
+
+     McLarens.push(
+       "https://i.ibb.co/DGvvwcf/wp4582703-mclaren-600lt-wallpapers.jpg"
+     );
+
+     McLarens.push(
+       "https://i.ibb.co/C9xDNbF/wp4582747-mclaren-600lt-wallpapers.jpg"
+     );
+
+     McLarens.push(
+       "https://i.ibb.co/Y3Q8W3g/wp4582758-mclaren-600lt-wallpapers.jpg"
+     );
+
+     McLarens.push(
+       "https://i.ibb.co/XZLGMxp/wp4582765-mclaren-600lt-wallpapers.jpg"
+     );
+
+     imgs.innerHTML = "";
+     McLarens.forEach((item) => {
+       let divs = document.createElement("div");
+       let pic = document.createElement("img");
+    
+       pic.src = item;
+       pic.style.width = "300px";
+       pic.style.height = "200px";
+       divs.appendChild(pic);
+       imgs.appendChild(divs);
+     });
+}
+		 </script>
+
+    </div> 
+</body>
+</html>
